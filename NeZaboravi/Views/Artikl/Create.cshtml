@@ -1,0 +1,42 @@
+﻿@model NeZaboravi.Models.Artikl
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="mx-auto text-center">
+<h1>Kreiraj novi zapis.</h1>
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Ime" class="control-label"></label>
+                <input asp-for="Ime" class="form-control" />
+                <span asp-validation-for="Ime" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="Ducan" class="control-label"></label>
+                <input asp-for="Ducan" class="form-control" />
+                <span asp-validation-for="Ducan" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Kreiraj" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+<br />
+<hr />
+<br />
+<button class="btn btn-light" style="color: white;">
+        <a asp-action="Index"><b>Vrati se na listu namirnica</b></a>
+</button>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,45 @@
+﻿@model IEnumerable<NeZaboravi.Models.Artikl>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="mx-auto text-center">
+<h1>Pogledaj sve što trebaš kupiti</h1>
+<br />
+<button class="btn btn-primary">
+        <a asp-action="Create" style="color: white;"><b>KREIRAJ NOVI ZAPIS</b></a>
+</button>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                    @Html.DisplayNameFor(model => model.Ime)
+            </th>
+            <th>
+                    @Html.DisplayNameFor(model => model.Ducan)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                        @Html.DisplayFor(modelItem => item.Ime)
+                </td>
+                <td>
+                        @Html.DisplayFor(modelItem => item.Ducan)
+                </td>
+                <td>
+                    <button class="btn btn-danger">
+                    <a asp-action="Delete" asp-route-id="@item.Id" style="color: white;"><b>OBRIŠI</b></a>
+                    </button>
+                </td>
+            </tr>
+            }
+    </tbody>
+</table>
+
+</div>

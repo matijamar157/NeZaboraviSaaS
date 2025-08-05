@@ -1,0 +1,26 @@
+﻿@page
+@model RegisterConfirmationModel
+@{
+    ViewData["Title"] = "Potvrda registracije.";
+}
+
+<div class="mx-auto text-center">
+<h1>@ViewData["Title"]</h1>
+    @{
+        if (@Model.DisplayConfirmAccountLink)
+        {
+        <p>
+        <button class="btn btn-primary">
+            <a id="confirm-link" href="@Model.EmailConfirmationUrl" style="color: white;">Klikni na ovaj link da potvrdiš registraciju.</a>
+        </button>
+        </p>
+        }
+        else
+        {
+        <p>
+                Please check your email to confirm your account.
+        </p>
+        }
+    }
+</div>
+

@@ -1,0 +1,101 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="mx-auto text-center">
+<br />
+<!-- Hero Section -->
+<section class="hero bg-primary text-white text-center py-5">
+    <div class="container">
+        <h1 class="display-4">Dobrodošli na stranicu nezaboravi.eu</h1>
+        <p class="lead">Jednostavna besplatna aplikacija gdje nikada nećete zaboraviti popis za kupnju.</p>
+            <a href="Identity/Account/Register" class="btn btn-light btn-lg">Registriraj se</a>
+            <a href="Identity/Account/Login" class="btn btn-light btn-lg">Ulogiraj se</a>
+            <hr />       
+            <h4>Registriranih korisnika:  @ViewBag.RegistriranihKorisnika | Napravljenih zapisa: @ViewBag.NapravljenihZapisa </h4>
+
+    </div>
+</section>
+<br />
+<hr />
+<br />
+<!-- Features Section -->
+<section class="features py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h3 class="card-title">Pregled svih zapisa</h3>
+                        <p class="card-text">Na jednom mjestu imate sve zapise koje stvari želite kupiti u dućanu.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h3 class="card-title">Jednostavan upis zapisa</h3>
+                        <p class="card-text">Jednstavan upis zapisa gdje upisujete što se želi kupiti i u kojem dućanu.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h3 class="card-title">Jednostavno brisanje zapisa</h3>
+                         <p class="card-text">Jedostavno brisanje zapisa gdje brišete ono što je kupljeno.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btn btn-primary btn-lg">
+                <a href="Identity/Account/Register" style="color: white;">Registriraj se</a>
+        </div>
+    </div>
+</section>
+<br>
+<hr />
+<br />
+<section class="fun-facts bg-success text-white text-center py-5" style="border-radius: 20px;">
+    <div class="container">
+        <h2 class="display-5">Zabavne činjenice o nezaboravi.eu</h2>
+        <p class="lead">Otkrijte zanimljive činjenice o aplikaciji koja čini vaše kupovanje lakšim!</p>
+        <hr class="my-4">
+        <div class="row">
+            <div class="col-lg-4">
+                <h3 class="display-6">📋 Najduži popis</h3>
+                <p>Najduži popis stvoren u aplikaciji imao je čak 123 stavke! Impresivno, zar ne?</p>
+            </div>
+            <div class="col-lg-4">
+                <h3 class="display-6">⏱️ Najbrže brisanje</h3>
+                <p>Korisnik je obrisao svih 10 stavki sa svog popisa za manje od 15 sekundi!</p>
+            </div>
+            <div class="col-lg-4">
+                <h3 class="display-6">🌍 Globalni doseg</h3>
+                <p>Naša aplikacija koristi se u 25 zemalja širom svijeta. Pridruži se globalnoj zajednici!</p>
+            </div>
+        </div>
+    </div>
+</section>
+    <br>
+    <hr />
+    <br />
+<section>
+     <div class="row mx-auto text-center">
+        <img src="~/Async.png">
+     </div>
+<br />
+</section>
+<br />
+<hr />
+<br />
+    <section>
+        <div class="row mx-auto text-center">
+            <img src="~/Gama.png">
+        </div>
+        <br />
+    </section>
+    <br />
+    <hr />
+    <br />

@@ -1,0 +1,29 @@
+﻿@model NeZaboravi.Models.Korisnik
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="mx-auto text-center">
+    <h4>Dodaj novog korisnika</h4>
+    <hr />
+    <div class="row">
+        <div class="col-md-12">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Ime" class="control-label">Unesite vaše ime</label>
+                    <input asp-for="Ime" class="form-control" />
+                    <span asp-validation-for="Ime" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Kreiraj korisnika" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
